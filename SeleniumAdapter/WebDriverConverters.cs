@@ -149,8 +149,8 @@ namespace Zu.SeleniumAdapter
         {
             switch (webDriverException.Error)
             {
-                case "stale element reference": return new StaleElementReferenceException(webDriverException.Message);
-                case "invalid element state": return new InvalidElementStateException(webDriverException.Message);
+                case "stale element reference": return new OpenQA.Selenium.StaleElementReferenceException(webDriverException.Message);
+                case "invalid element state": return new OpenQA.Selenium.InvalidElementStateException(webDriverException.Message);
                 case "No frame element found with name or id":
                 case "no such frame":
                     return new OpenQA.Selenium.NoSuchFrameException(webDriverException.Message);
@@ -163,7 +163,7 @@ namespace Zu.SeleniumAdapter
                 case "invalid operation":
                     return new InvalidOperationException(webDriverException.Message);
                 case "invalid argument":
-                    return new ElementNotVisibleException(webDriverException.Message);
+                    return new OpenQA.Selenium.ElementNotVisibleException(webDriverException.Message);
             }
             return new ArgumentOutOfRangeException(nameof(webDriverException), webDriverException.Error);
         }
