@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlForTests", "HtmlForTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHTTPServer", "SimpleHTTPServer\SimpleHTTPServer.csproj", "{1F150971-6DD8-42FA-AF03-36D68AD40A8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAsyncWebBrowserClient", "..\..\vs4\IAsyncWebBrowserClient\IAsyncWebBrowserClient\IAsyncWebBrowserClient.csproj", "{11CC358D-3CD1-4A7C-A864-A45F7022AA44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAsyncWebBrowserClient", "..\IAsyncWebBrowserClient\IAsyncWebBrowserClient\IAsyncWebBrowserClient.csproj", "{11CC358D-3CD1-4A7C-A864-A45F7022AA44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsReport", "TestsReport\TestsReport.csproj", "{9E53AFC4-58AC-4F5D-80C9-E335A3AEDB3C}"
 EndProject
