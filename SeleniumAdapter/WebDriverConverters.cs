@@ -165,7 +165,7 @@ namespace Zu.SeleniumAdapter
                 case "invalid argument":
                     return new OpenQA.Selenium.ElementNotVisibleException(webDriverException.Message);
             }
-            return new ArgumentOutOfRangeException(nameof(webDriverException), webDriverException.Error);
+            return new ArgumentOutOfRangeException($"{nameof(ToSeleniumException)} doesn't support \"{webDriverException.Error}\" error", webDriverException);
         }
     }
 }
