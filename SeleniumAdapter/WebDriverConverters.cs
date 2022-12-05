@@ -149,21 +149,21 @@ namespace Zu.SeleniumAdapter
         {
             switch (webDriverException.Error)
             {
-                case "stale element reference": return new OpenQA.Selenium.StaleElementReferenceException(webDriverException.Message);
-                case "invalid element state": return new OpenQA.Selenium.InvalidElementStateException(webDriverException.Message);
+                case "stale element reference": return new OpenQA.Selenium.StaleElementReferenceException(webDriverException.Message, webDriverException);
+                case "invalid element state": return new OpenQA.Selenium.InvalidElementStateException(webDriverException.Message, webDriverException);
                 case "No frame element found with name or id":
                 case "no such frame":
-                    return new OpenQA.Selenium.NoSuchFrameException(webDriverException.Message);
+                    return new OpenQA.Selenium.NoSuchFrameException(webDriverException.Message, webDriverException);
                 case "no such element":
-                    return new OpenQA.Selenium.NoSuchElementException(webDriverException.Message);
+                    return new OpenQA.Selenium.NoSuchElementException(webDriverException.Message, webDriverException);
                 case "invalid selector":
-                    return new OpenQA.Selenium.InvalidSelectorException(webDriverException.Message);
+                    return new OpenQA.Selenium.InvalidSelectorException(webDriverException.Message, webDriverException);
                 case "script timeout":
-                    return new OpenQA.Selenium.WebDriverTimeoutException(webDriverException.Message);
+                    return new OpenQA.Selenium.WebDriverTimeoutException(webDriverException.Message, webDriverException);
                 case "invalid operation":
-                    return new InvalidOperationException(webDriverException.Message);
+                    return new InvalidOperationException(webDriverException.Message, webDriverException);
                 case "invalid argument":
-                    return new OpenQA.Selenium.ElementNotVisibleException(webDriverException.Message);
+                    return new OpenQA.Selenium.ElementNotVisibleException(webDriverException.Message, webDriverException);
             }
             return new ArgumentOutOfRangeException($"{nameof(ToSeleniumException)} doesn't support \"{webDriverException.Error}\" error", webDriverException);
         }
